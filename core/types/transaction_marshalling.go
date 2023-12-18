@@ -32,9 +32,11 @@ type txJSON struct {
 
 	ChainID              *hexutil.Big    `json:"chainId,omitempty"`
 	Nonce                *hexutil.Uint64 `json:"nonce"`
+	From                 *common.Address `json:"from"`
 	To                   *common.Address `json:"to"`
 	Gas                  *hexutil.Uint64 `json:"gas"`
 	GasPrice             *hexutil.Big    `json:"gasPrice"`
+	TransactionIndex     *hexutil.Uint64 `json:"transactionIndex"`
 	MaxPriorityFeePerGas *hexutil.Big    `json:"maxPriorityFeePerGas"`
 	MaxFeePerGas         *hexutil.Big    `json:"maxFeePerGas"`
 	MaxFeePerBlobGas     *hexutil.Big    `json:"maxFeePerBlobGas,omitempty"`
@@ -45,6 +47,7 @@ type txJSON struct {
 	V                    *hexutil.Big    `json:"v"`
 	R                    *hexutil.Big    `json:"r"`
 	S                    *hexutil.Big    `json:"s"`
+	SourceHash           common.Hash     `json:"sourceHash"`
 	YParity              *hexutil.Uint64 `json:"yParity,omitempty"`
 
 	// Only used for encoding:
@@ -398,8 +401,72 @@ func (tx *Transaction) UnmarshalJSON(input []byte) error {
 			}
 		}
 
+	case ComboTxType:
+		var itx ComboTx
+		inner = &itx
+
+		if dec.Nonce == nil {
+			return errors.New("missing required field 'nonce' in transaction")
+		}
+		itx.Nonce = uint64(*dec.Nonce)
+		if dec.To != nil {
+			itx.To = dec.To
+		}
+
+		if dec.From != nil {
+			itx.From = dec.From
+		}
+
+		if dec.Value == nil {
+			return errors.New("missing required field 'value' in transaction")
+		}
+		itx.Value = (*big.Int)(dec.Value)
+		if dec.Input == nil {
+			return errors.New("missing required field 'input' in transaction")
+		}
+		itx.Input = *dec.Input
+
+		if dec.Gas == nil {
+			return errors.New("missing required field 'gas' in transaction")
+		}
+		itx.Gas = uint64(*dec.Gas)
+		if dec.GasPrice == nil {
+			return errors.New("missing required field 'gasPrice' in transaction")
+		}
+		itx.GasPrice = (*big.Int)(dec.GasPrice)
+
+		if dec.TransactionIndex == nil {
+			return errors.New("missing required field 'nonce' in transaction")
+		}
+		itx.TransactionIndex = uint64(*dec.TransactionIndex)
+
+		// signature R
+		if dec.R == nil {
+			return errors.New("missing required field 'r' in transaction")
+		}
+		itx.R = (*big.Int)(dec.R)
+		// signature S
+		if dec.S == nil {
+			return errors.New("missing required field 's' in transaction")
+		}
+		itx.S = (*big.Int)(dec.S)
+		// signature V
+		itx.V, err = dec.yParityValue()
+		if err != nil {
+			return err
+		}
+		if itx.V.Sign() != 0 || itx.R.Sign() != 0 || itx.S.Sign() != 0 {
+			if err := sanityCheckSignature(itx.V, itx.R, itx.S, false); err != nil {
+				return err
+			}
+		}
+
 	default:
-		return ErrTxTypeNotSupported
+		{
+
+		}
+		// disable the err
+		//return ErrTxTypeNotSupported
 	}
 
 	// Now set the inner transaction.
