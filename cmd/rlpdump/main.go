@@ -28,8 +28,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/xyz-ass/go-ethereum-l2/common"
+	"github.com/xyz-ass/go-ethereum-l2/rlp"
 )
 
 var (

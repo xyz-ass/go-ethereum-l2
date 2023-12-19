@@ -19,17 +19,17 @@ package core
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/state/snapshot"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/xyz-ass/go-ethereum-l2/common"
+	"github.com/xyz-ass/go-ethereum-l2/consensus"
+	"github.com/xyz-ass/go-ethereum-l2/core/rawdb"
+	"github.com/xyz-ass/go-ethereum-l2/core/state"
+	"github.com/xyz-ass/go-ethereum-l2/core/state/snapshot"
+	"github.com/xyz-ass/go-ethereum-l2/core/types"
+	"github.com/xyz-ass/go-ethereum-l2/core/vm"
+	"github.com/xyz-ass/go-ethereum-l2/event"
+	"github.com/xyz-ass/go-ethereum-l2/params"
+	"github.com/xyz-ass/go-ethereum-l2/rlp"
+	"github.com/xyz-ass/go-ethereum-l2/trie"
 )
 
 // CurrentHeader retrieves the current head header of the canonical chain. The

@@ -24,9 +24,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/p2p/discover/v4wire"
+	"github.com/xyz-ass/go-ethereum-l2/crypto"
+	"github.com/xyz-ass/go-ethereum-l2/internal/utesting"
+	"github.com/xyz-ass/go-ethereum-l2/p2p/discover/v4wire"
 )
 
 const (

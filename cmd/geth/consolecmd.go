@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/internal/flags"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/cmd/utils"
+	"github.com/xyz-ass/go-ethereum-l2/console"
+	"github.com/xyz-ass/go-ethereum-l2/internal/flags"
 )
 
 var (

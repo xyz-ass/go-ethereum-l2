@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/xyz-ass/go-ethereum-l2/common"
 )
 
 const (

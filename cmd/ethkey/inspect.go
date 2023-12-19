@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/accounts/keystore"
+	"github.com/xyz-ass/go-ethereum-l2/cmd/utils"
+	"github.com/xyz-ass/go-ethereum-l2/crypto"
 )
 
 type outputInspect struct {

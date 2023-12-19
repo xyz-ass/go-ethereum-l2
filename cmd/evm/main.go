@@ -22,10 +22,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/ethereum/go-ethereum/cmd/evm/internal/t8ntool"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/internal/flags"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/cmd/evm/internal/t8ntool"
+	"github.com/xyz-ass/go-ethereum-l2/internal/debug"
+	"github.com/xyz-ass/go-ethereum-l2/internal/flags"
 )
 
 var (

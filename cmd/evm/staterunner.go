@@ -22,14 +22,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/state/snapshot"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/tracers/logger"
-	"github.com/ethereum/go-ethereum/tests"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/common"
+	"github.com/xyz-ass/go-ethereum-l2/core/rawdb"
+	"github.com/xyz-ass/go-ethereum-l2/core/state"
+	"github.com/xyz-ass/go-ethereum-l2/core/state/snapshot"
+	"github.com/xyz-ass/go-ethereum-l2/core/vm"
+	"github.com/xyz-ass/go-ethereum-l2/eth/tracers/logger"
+	"github.com/xyz-ass/go-ethereum-l2/tests"
 )
 
 var stateTestCommand = &cli.Command{

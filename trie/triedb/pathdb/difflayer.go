@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/trie/trienode"
-	"github.com/ethereum/go-ethereum/trie/triestate"
+	"github.com/xyz-ass/go-ethereum-l2/common"
+	"github.com/xyz-ass/go-ethereum-l2/log"
+	"github.com/xyz-ass/go-ethereum-l2/trie/trienode"
+	"github.com/xyz-ass/go-ethereum-l2/trie/triestate"
 )
 
 // diffLayer represents a collection of modifications made to the in-memory tries

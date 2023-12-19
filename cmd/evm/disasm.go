@@ -22,8 +22,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/core/asm"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/core/asm"
 )
 
 var disasmCommand = &cli.Command{

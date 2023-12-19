@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/xyz-ass/go-ethereum-l2/ethdb"
 )
 
 func TestResetFreezer(t *testing.T) {

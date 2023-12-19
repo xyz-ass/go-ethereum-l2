@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/p2p/enode"
 	"github.com/urfave/cli/v2"
+	"github.com/xyz-ass/go-ethereum-l2/internal/debug"
+	"github.com/xyz-ass/go-ethereum-l2/internal/flags"
+	"github.com/xyz-ass/go-ethereum-l2/p2p/enode"
 )
 
 var app = flags.NewApp("go-ethereum devp2p tool")

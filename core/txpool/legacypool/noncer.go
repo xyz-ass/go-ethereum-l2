@@ -19,8 +19,8 @@ package legacypool
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/xyz-ass/go-ethereum-l2/common"
+	"github.com/xyz-ass/go-ethereum-l2/core/state"
 )
 
 // noncer is a tiny virtual state database to manage the executable nonces of

@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/golang-jwt/jwt/v4"
+	"github.com/xyz-ass/go-ethereum-l2/rpc"
 )
 
 // NewJWTAuth creates an rpc client authentication provider that uses JWT. The

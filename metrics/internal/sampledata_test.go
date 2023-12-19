@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/xyz-ass/go-ethereum-l2/metrics"
 )
 
 func TestCollectRuntimeMetrics(t *testing.T) {
