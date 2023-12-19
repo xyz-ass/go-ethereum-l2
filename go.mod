@@ -1,4 +1,4 @@
-module github.com/xyz-ass/go-ethereum-l2
+module github.com/ethereum/go-ethereum
 
 go 1.20
 
